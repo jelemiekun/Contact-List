@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.fxcontactnumber3rd.Scene1Controller">
+    <children>
+        <TableView fx:id="tableView" layoutY="92.0" onMouseClicked="#clickedRow" prefHeight="408.0" prefWidth="500.0">
+            <columns>
+                <TableColumn fx:id="colName" prefWidth="273.0" text="Name" />
+                <TableColumn fx:id="colNumber" prefWidth="226.0" text="Phone Number" />
+            </columns>
+        </TableView>
+        <Label layoutX="149.0" layoutY="27.0" text="Contact List">
+            <font>
+                <Font name="SansSerif Bold" size="35.0" />
+            </font>
+        </Label>
+        <ImageView fx:id="btnAdd" fitHeight="55.0" fitWidth="61.0" layoutX="434.0" layoutY="434.0" onMouseClicked="#btnAdd" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@Media/imgAdd.png" />
+            </image>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </ImageView>
+      <ImageView fx:id="btnAdd1" fitHeight="61.0" fitWidth="70.0" layoutX="10.0" layoutY="433.0" onMouseClicked="#btnRefresh" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Media/imgRefresh.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <TextField fx:id="txtFieldSearch" layoutX="374.0" layoutY="56.0" onKeyPressed="#txtFieldSearchPressedEnter" prefHeight="25.0" prefWidth="112.0" promptText="Search" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.fxcontactnumber3rd.Scene2Controller">
+    <children>
+        <Label layoutX="149.0" layoutY="27.0" text="Contact List">
+            <font>
+                <Font name="SansSerif Bold" size="35.0" />
+            </font>
+        </Label>
+        <Pane layoutX="43.0" layoutY="95.0" prefHeight="317.0" prefWidth="431.0">
+            <children>
+                <Label layoutY="34.0" text="Name: ">
+                    <font>
+                        <Font name="SansSerif Regular" size="20.0" />
+                    </font>
+                </Label>
+                <Label layoutY="198.0" text="Age:">
+                    <font>
+                        <Font name="SansSerif Regular" size="20.0" />
+                    </font>
+                </Label>
+                <Label layoutY="259.0" text="Gender:">
+                    <font>
+                        <Font name="SansSerif Regular" size="20.0" />
+                    </font>
+                </Label>
+                <Label layoutY="143.0" text="Address:">
+                    <font>
+                        <Font name="SansSerif Regular" size="20.0" />
+                    </font>
+                </Label>
+                <Label layoutY="89.0" text="Phone Number:">
+                    <font>
+                        <Font name="SansSerif Regular" size="20.0" />
+                    </font>
+                </Label>
+                <Pane layoutX="155.0" layoutY="29.0" prefHeight="198.0" prefWidth="250.0">
+                    <children>
+                        <TextField fx:id="txtFieldName" onKeyPressed="#fieldsPressedEnter" prefHeight="32.0" prefWidth="250.0" />
+                        <TextField fx:id="txtFieldPhoneNumber" layoutY="56.0" onKeyPressed="#fieldsPressedEnter" prefHeight="32.0" prefWidth="250.0" />
+                        <TextField fx:id="txtFieldAddress" layoutY="111.0" onKeyPressed="#fieldsPressedEnter" prefHeight="32.0" prefWidth="250.0" />
+                        <TextField fx:id="txtFieldAge" layoutY="168.0" onKeyPressed="#fieldsPressedEnter" prefHeight="32.0" prefWidth="250.0" />
+                    </children>
+                </Pane>
+                <Pane layoutX="153.0" layoutY="243.0" prefHeight="48.0" prefWidth="250.0">
+                    <children>
+                        <RadioButton fx:id="radioBtnMale" layoutY="16.0" mnemonicParsing="false" onMouseClicked="#radioBtnClicked" text="Male">
+                            <font>
+                                <Font name="SansSerif Regular" size="16.0" />
+                            </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="toggleGroupGender" />
+                     </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="radioBtnFemale" layoutX="78.0" layoutY="16.0" mnemonicParsing="false" onMouseClicked="#radioBtnClicked" text="Female" toggleGroup="$toggleGroupGender">
+                            <font>
+                                <Font name="SansSerif Regular" size="16.0" />
+                            </font>
+                        </RadioButton>
+                        <RadioButton fx:id="radioBtnOthers" layoutX="172.0" layoutY="16.0" mnemonicParsing="false" onMouseClicked="#radioBtnClicked" text="Others" toggleGroup="$toggleGroupGender">
+                            <font>
+                                <Font name="SansSerif Regular" size="16.0" />
+                            </font>
+                        </RadioButton>
+                    </children>
+                </Pane>
+            </children>
+        </Pane>
+        <ImageView fx:id="imgViewAddToContacts" fitHeight="150.0" fitWidth="200.0" layoutX="152.0" layoutY="422.0" onMouseClicked="#imgViewAddToContactsClicked" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@Media/imgAddToContact.png" />
+            </image>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </ImageView>
+        <ImageView fx:id="imgViewGoBack" fitHeight="61.0" fitWidth="41.0" layoutX="17.0" layoutY="18.0" onMouseClicked="#imgViewGoBackClicked" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@Media/imgBack.png" />
+            </image>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </ImageView>
+        <ImageView fx:id="imgViewEdit" fitHeight="59.0" fitWidth="64.0" layoutX="428.0" layoutY="13.0" onMouseClicked="#imgViewEditClicked" pickOnBounds="true" preserveRatio="true" visible="false">
+            <image>
+                <Image url="@Media/imgEdit.png" />
+            </image>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </ImageView>
+      <ImageView fx:id="imgDelete" fitHeight="32.0" fitWidth="31.0" layoutX="387.0" layoutY="27.0" onMouseClicked="#imgDeleteClicked" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@Media/imgDelete.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="33.0" layoutY="129.0" text="*" textFill="RED">
+         <font>
+            <Font name="SansSerif Regular" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="33.0" layoutY="185.0" text="*" textFill="RED">
+         <font>
+            <Font name="SansSerif Regular" size="20.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>
