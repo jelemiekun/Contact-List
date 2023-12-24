@@ -13,8 +13,10 @@ Features
 - Search a Contact Person
 -----------------------------------------------------------------------------------------------
 
+
+
 -----------------------------------------------------------------------------------------------
-Created by jelemiekun
-Design by abelalamove
-namo renyel aralin mo na oop
+- Created by jelemiekun
+- Design by abellalamove
+- namo renyel aralin mo na oop
 -----------------------------------------------------------------------------------------------
